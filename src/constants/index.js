@@ -19,19 +19,19 @@ const navLinks = [
 const navIcons = [
     {
         id: 1,
-        img: "assets/public/icons/wifi.svg",
+        img: "icons/wifi.svg",
     },
     {
         id: 2,
-        img: "assets/public/icons/search.svg",
+        img: "icons/search.svg",
     },
     {
         id: 3,
-        img: "assets/public/icons/user.svg",
+        img: "icons/user.svg",
     },
     {
         id: 4,
-        img: "assets/public/icons/mode.svg",
+        img: "icons/mode.svg",
     },
 ];
 
@@ -51,7 +51,7 @@ const dockApps = [
     {
         id: "photos",
         name: "Gallery", // was "Photos"
-        icon: "photos.png",
+        icon: "photos.svg",
         canOpen: true,
     },
     {

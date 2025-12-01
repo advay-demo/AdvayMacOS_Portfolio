@@ -105,24 +105,24 @@ const techStack = [
         items: ["React.js", "Next.js", "TypeScript"],
     },
     {
-        category: "Mobile",
-        items: ["React Native", "Expo"],
-    },
-    {
         category: "Styling",
-        items: ["Tailwind CSS", "Sass", "CSS"],
+        items: ["Tailwind CSS", "CSS","GSAP"],
     },
     {
         category: "Backend",
-        items: ["Node.js", "Express", "NestJS", "Hono"],
+        items: ["Node.js", "Express"],
     },
     {
         category: "Database",
-        items: ["MongoDB", "PostgreSQL"],
+        items: [".."],
     },
     {
         category: "Dev Tools",
-        items: ["Git", "GitHub", "Docker"],
+        items: ["Git", "GitHub"],
+    },
+    {
+        category: "Languages",
+        items: ["Python", "C++","Java(basics)"],
     },
 ];
 
@@ -229,7 +229,7 @@ const WORK_LOCATION = {
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-10 left-5", // icon position inside Finder
-            windowPosition: "top-[5vh] left-5", // optional: Finder window position
+            windowPosition: "top-[5vh] left-5", // optional: Finder window.js position
             children: [
                 {
                     id: 1,

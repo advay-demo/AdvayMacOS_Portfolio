@@ -1,2 +1,4 @@
 import Terminal from './Terminal';
-export{Terminal};
+import Contact from './contact';
+
+export { Terminal, Contact };

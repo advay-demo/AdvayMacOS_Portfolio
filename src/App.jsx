@@ -7,6 +7,9 @@ gsap.registerPlugin(Draggable);
 import {Terminal} from "@windows";
 import { Contact } from "@windows";
 import {Articles} from "@windows";
+import { Article1, Article2, Article3 } from "@windows";
+
+
 
 const App=() =>{
     return (
@@ -16,6 +19,10 @@ const App=() =>{
             <Dock/>
 
             <Articles/>
+            <Article1 />
+            <Article2 />
+            <Article3 />
+            
             <Contact />
             <Terminal/>
             

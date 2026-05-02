@@ -6,6 +6,7 @@ import {Draggable} from "gsap/Draggable";
 gsap.registerPlugin(Draggable);
 import {Terminal} from "@windows";
 import { Contact } from "@windows";
+import {Articles} from "@windows";
 
 const App=() =>{
     return (
@@ -14,8 +15,10 @@ const App=() =>{
             <Welcome/>
             <Dock/>
 
+            <Articles/>
             <Contact />
             <Terminal/>
+            
         </main>
     );
 };

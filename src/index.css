@@ -13,6 +13,7 @@ body {
     background-position: center;
 }
 
+
 @theme {
     --font-georama: "Georama", sans-serif;
     --font-roboto: "Roboto Mono", monospace;
@@ -207,6 +208,39 @@ body {
             }
         }
     }
+    #articles {
+    @apply w-xl absolute top-36 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+
+    h2 {
+        @apply font-bold text-sm text-center w-full;
+    }
+
+    .techstack {
+        @apply text-sm font-roboto p-5;
+
+        .label {
+            @apply flex items-center ms-10 mt-7;
+        }
+
+        .content {
+            @apply py-5 my-5 border-y border-dashed space-y-1;
+
+            li {
+                h3 {
+                    @apply font-semibold text-gray-800 w-40 ms-5;
+                }
+            }
+        }
+
+        .footnote {
+            @apply text-gray-600 space-y-1;
+
+            p {
+                @apply flex items-center;
+            }
+        }
+    }
+}
 
     #contact {
     @apply w-xl absolute top-40 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;

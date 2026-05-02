@@ -118,6 +118,105 @@ body {
     #window-header {
         @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
     }
+#article-1,
+#article-2,
+#article-3 {
+  width: 750px;
+  max-height: 80vh;
+  overflow: hidden;
+
+  border-radius: 14px;
+  backdrop-filter: blur(20px);
+  background: rgba(20, 20, 20, 0.75);
+
+  box-shadow: 
+    0 10px 40px rgba(0,0,0,0.4),
+    inset 0 1px rgba(255,255,255,0.05);
+}
+
+
+
+#article-1 #window-header,
+#article-2 #window-header,
+#article-3 #window-header {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+
+
+.article-content {
+  padding: 20px 24px;
+  overflow-y: auto;
+  max-height: 70vh;
+
+  color: #e5e7eb;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+.article-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.article-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.article-content::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
+
+.article-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+
+.article-content h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.article-content p {
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.article-content ul {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.article-content li {
+  margin-bottom: 6px;
+}
+
+
+.article-content strong {
+  color: #22c55e;
+}
+
+.article-content code {
+  background: rgba(255,255,255,0.08);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.article-content {
+  font-family: "SF Mono", "JetBrains Mono", monospace;
+}
+#window-header h2 {
+  font-family: "SF Mono", "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 800;
+
+}
 
     #safari {
         @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;

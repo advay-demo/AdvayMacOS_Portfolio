@@ -1,19 +1,16 @@
 const navLinks = [
     {
-        id: 1,
+        id: "finder",
         name: "Projects",
-        type: "finder",
     },
     {
-        id: 3,
+        id: "contact",
         name: "Contact",
-        type: "contact",
     },
     {
-        id: 4,
+        id: "resume",
         name: "Resume",
-        type: "resume",
-    },
+    },  
 ];
 
 const navIcons = [
@@ -37,38 +34,38 @@ const navIcons = [
 
 const dockApps = [
     {
-        id: "finder",
-        name: "Portfolio", // was "Finder"
+        id: "portfolio",  
+        name: "Portfolio",
         icon: "finder.png",
         canOpen: true,
     },
     {
-        id: "safari",
-        name: "Articles", // was "Safari"
+        id: "articles",
+        name: "Articles",
         icon: "safari.png",
         canOpen: true,
     },
     {
         id: "photos",
-        name: "Gallery", // was "Photos"
+        name: "Gallery",
         icon: "photos.svg",
         canOpen: true,
     },
     {
         id: "contact",
-        name: "Contact", // or "Get in touch"
+        name: "Contact",
         icon: "contact.png",
         canOpen: true,
     },
     {
         id: "terminal",
-        name: "Skills", // was "Terminal"
+        name: "Skills",
         icon: "terminal.png",
         canOpen: true,
     },
     {
         id: "trash",
-        name: "Archive", // was "Trash"
+        name: "Archive",
         icon: "trash.png",
         canOpen: false,
     },
@@ -501,6 +498,14 @@ const WINDOW_CONFIG = {
     terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+
+    portfolio: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+
+    articles: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+
+    "article-1": { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    "article-2": { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    "article-3": { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

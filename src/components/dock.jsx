@@ -92,6 +92,10 @@ const Dock = () => {
                                 className={canOpen ? "" : "opacity-60"}
                             />
                         </button>
+                        {/* Open App Indicator */}
+                        {windows[id]?.isOpen && (
+                            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/80 rounded-full shadow-sm pointer-events-none" />
+                        )}
                     </div>
                 ))}
 

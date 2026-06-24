@@ -7,10 +7,6 @@ body {
     width: 100dvw;
     overflow: hidden;
     height: 100dvh;
-    background-image: url("../public/images/wallpaper.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 
@@ -540,4 +536,59 @@ body {
             }
         }
     }
+}
+
+.maximized {
+    width: 100vw !important;
+    height: calc(100vh - 40px) !important;
+    top: 40px !important;
+    left: 0px !important;
+    transform: none !important;
+    border-radius: 0px !important;
+    margin: 0px !important;
+}
+
+/* Mission Control Styles */
+.mission-control-active {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-blend-mode: overlay;
+    transition: background-color 0.4s ease;
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.mission-control-active nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.mission-control-active .window-wrapper {
+    position: relative !important;
+    display: inline-block !important;
+    transform: scale(0.55) !important;
+    transform-origin: top center !important;
+    margin: -5vh -5vw !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8) !important;
+    cursor: pointer !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    left: auto !important;
+    top: auto !important;
+    vertical-align: top;
+}
+
+.mission-control-active .window-wrapper:hover {
+    transform: scale(0.6) !important;
+    z-index: 9999 !important;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.8), 0 25px 50px -12px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Hide desktop icons and welcome message during Mission Control */
+.mission-control-active #desktop-icons-container,
+.mission-control-active #welcome {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease;
 }

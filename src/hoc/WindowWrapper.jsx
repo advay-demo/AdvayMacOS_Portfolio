@@ -9,7 +9,7 @@ gsap.registerPlugin(Draggable);
 const WindowWrapper = (Component, windowKey) => {
     const Wrapped = (props) => {
         const { focusWindow, windows } = useWindowStore();
-        const { isOpen, zIndex } = windows[windowKey];
+        const { isOpen, zIndex, isMaximized, isMinimized } = windows[windowKey] || {};
         const ref = useRef(null);
 
         useGSAP(() => {
@@ -30,6 +30,7 @@ const WindowWrapper = (Component, windowKey) => {
             if (!el) return;
 
             Draggable.create(el, {
+                bounds: "body",
                 onPress: () => focusWindow(windowKey),
             });
         }, []);
@@ -38,18 +39,22 @@ const WindowWrapper = (Component, windowKey) => {
             const el = ref.current;
             if (!el) return;
 
-            el.style.display = isOpen ? "block" : "none";
-        }, [isOpen]);
+            if (!isOpen || isMinimized) {
+                el.style.display = "none";
+            } else {
+                el.style.display = "block";
+            }
+        }, [isOpen, isMinimized]);
 
         return (
             <section
                 id={windowKey}
                 ref={ref}
                 style={{ zIndex }}
-                className="absolute"
+                className={`absolute window-wrapper ${isMaximized ? "maximized" : ""}`}
                 onMouseDown={() => focusWindow(windowKey)}
             >
-                <Component {...props} />
+                {isOpen && <Component {...props} />}
             </section>
         );
     };

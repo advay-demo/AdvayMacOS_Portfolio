@@ -78,48 +78,48 @@ const blogPosts = [
         title:
             "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
         image: "/images/blog1.png",
-        link: "",
+        link: "#",
     },
     {
         id: 2,
         date: "Aug 28, 2025",
         title: "The Ultimate Guide to Mastering Three.js for 3D Development",
         image: "/images/blog2.png",
-        link: "",
+        link: "#",
     },
     {
         id: 3,
         date: "Aug 15, 2025",
         title: "The Ultimate Guide to Mastering GSAP Animations",
         image: "/images/blog3.png",
-        link: "",
+        link: "#",
     },
 ];
 
 const techStack = [
     {
         category: "Frontend",
-        items: ["React.js", "Next.js", "TypeScript"],
+        items: ["React", "Next.js", "TypeScript"],
     },
     {
         category: "Styling",
-        items: ["Tailwind CSS", "CSS","GSAP"],
+        items: ["Tailwind CSS", "GSAP", "CSS"],
     },
     {
         category: "Backend",
-        items: ["Node.js", "Express"],
+        items: ["Node.js", "Express", "Flask"],
     },
     {
         category: "Database",
-        items: [".."],
+        items: ["PostgreSQL", "MongoDB"],
     },
     {
         category: "Dev Tools",
-        items: ["Git", "GitHub"],
+        items: ["Git", "GitHub", "Docker"],
     },
     {
         category: "Languages",
-        items: ["Python", "C++","Java(basics)"],
+        items: ["Python", "C++", "Java"],
     },
 ];
 
@@ -129,28 +129,28 @@ const socials = [
         text: "Github",
         icon: "/icons/github.svg",
         bg: "#f4656b",
-        link: "",
+        link: "#",
     },
     {
         id: 2,
         text: "Platform",
         icon: "/icons/atom.svg",
         bg: "#4bcb63",
-        link: "",
+        link: "#",
     },
     {
         id: 3,
         text: "Twitter/X",
         icon: "/icons/twitter.svg",
         bg: "#ff866b",
-        link: "",
+        link: "#",
     },
     {
         id: 4,
         text: "LinkedIn",
         icon: "/icons/linkedin.svg",
         bg: "#05b6f6",
-        link: "",
+        link: "#",
     },
 ];
 
@@ -160,46 +160,12 @@ const photosLinks = [
         icon: "/icons/gicon1.svg",
         title: "Library",
     },
-    {
-        id: 2,
-        icon: "/icons/gicon2.svg",
-        title: "Memories",
-    },
-    {
-        id: 3,
-        icon: "/icons/file.svg",
-        title: "Places",
-    },
-    {
-        id: 4,
-        icon: "/icons/gicon4.svg",
-        title: "People",
-    },
-    {
-        id: 5,
-        icon: "/icons/gicon5.svg",
-        title: "Favorites",
-    },
 ];
 
-const gallery = [
-    {
-        id: 1,
-        img: "/images/gal1.png",
-    },
-    {
-        id: 2,
-        img: "/images/gal2.png",
-    },
-    {
-        id: 3,
-        img: "/images/gal3.png",
-    },
-    {
-        id: 4,
-        img: "/images/gal4.png",
-    },
-];
+const gallery = Array.from({ length: 31 }, (_, i) => ({
+    id: i + 1,
+    img: `/images/cool${i + 1}.jpg`,
+}));
 
 export {
     navLinks,
@@ -266,7 +232,7 @@ const WORK_LOCATION = {
                     icon: "/images/plain.png",
                     kind: "file",
                     fileType: "fig",
-                    href: "https://google.com",
+                    href: "#",
                     position: "top-60 right-20",
                 },
             ],
@@ -319,7 +285,7 @@ const WORK_LOCATION = {
                     icon: "/images/plain.png",
                     kind: "file",
                     fileType: "fig",
-                    href: "https://google.com",
+                    href: "#",
                     position: "top-60 left-5",
                 },
             ],
@@ -372,7 +338,7 @@ const WORK_LOCATION = {
                     icon: "/images/plain.png",
                     kind: "file",
                     fileType: "fig",
-                    href: "https://google.com",
+                    href: "#",
                     position: "top-60 right-20",
                 },
             ],
@@ -447,7 +413,7 @@ const RESUME_LOCATION = {
             kind: "file",
             fileType: "pdf",
             // you can add `href` if you want to open a hosted resume
-            // href: "/your/resume/path.pdf",
+            href: "#",
         },
     ],
 };

@@ -10,11 +10,11 @@ import Spotlight from "./components/Spotlight.jsx";
 import ContextMenu from "./components/ContextMenu.jsx";
 import DesktopIcons from "./components/DesktopIcons.jsx";
 gsap.registerPlugin(Draggable);
-import {Terminal} from "@windows";
+import { Terminal } from "@windows";
 import { Contact } from "@windows";
-import {Articles} from "@windows";
+import { Articles } from "@windows";
 import { Article1, Article2, Article3 } from "@windows";
-import { Photos } from "@windows";
+import { Photos, Resume, Finder, Archive } from "@windows";
 
 const App = () => {
     const { wallpaper, isMissionControl, toggleMissionControl } = useSystemStore();
@@ -49,6 +49,8 @@ const App = () => {
             <Welcome/>
             <Dock/>
 
+            <Finder />
+            <Archive />
             <Articles/>
             <Article1 />
             <Article2 />
@@ -57,6 +59,7 @@ const App = () => {
             <Contact />
             <Terminal/>
             <Photos />
+            <Resume />
         </main>
     );
 };

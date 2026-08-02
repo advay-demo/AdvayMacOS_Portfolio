@@ -11,13 +11,13 @@ const articles = [
   },
   {
     id: "article-2",
-    title: "How Open Source Made Me a Better Developer",
-    desc: "Lessons from contributing to real-world projects.",
+    title: "FOSSEE Internship Experience",
+    desc: "My experience working on open-source projects during the FOSSEE internship.",
   },
   {
     id: "article-3",
-    title: "Recreating Apple UI Animations on the Web",
-    desc: "GSAP, physics, and UI details.",
+    title: "The Internship Hustle: Balancing It All",
+    desc: "DSA, projects, GPA, and trying to stay sane while looking for an internship.",
   },
 ];
 

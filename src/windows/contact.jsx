@@ -6,8 +6,8 @@ import { Check } from "lucide-react";
 const contacts = [
     { label: "GitHub", value: "github.com/advay-demo", link: "https://github.com/advay-demo" },
     { label: "LinkedIn", value: "linkedin.com/in/advaybhagat", link: "https://www.linkedin.com/in/advaybhagat/" },
-    { label: "Phone", value: "+91 8595776681" },
-    { label: "Email", value: "ad14bhagat@gmail.com" },
+    { label: "Phone", value: "+91 8595776681", link: "tel:+918595776681" },
+    { label: "Email", value: "ad14bhagat@gmail.com", link: "mailto:ad14bhagat@gmail.com" },
     { label: "LeetCode", value: "leetcode.com/advaybhagat", link: "https://leetcode.com/u/navdTt0YMi/" },
     { label: "Location", value: "Delhi, India" },
 ];
@@ -35,7 +35,7 @@ const Contact = () => {
                             <p>Details</p>
                         </div>
                     </div>
-                    <div className="w-25 h-25 rounded-full overflow-hidden border-2 border-gray-400 shadow-sm">
+                    <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-400 shadow-sm">
                         <img
                             src="/images/advayy.jpeg"
                             alt="profile"

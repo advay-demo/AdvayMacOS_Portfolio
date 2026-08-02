@@ -16,26 +16,26 @@ const navLinks = [
 const navIcons = [
     {
         id: 1,
-        img: "icons/wifi.svg",
+        img: "/icons/wifi.svg",
     },
     {
         id: 2,
-        img: "icons/search.svg",
+        img: "/icons/search.svg",
     },
     {
         id: 3,
-        img: "icons/user.svg",
+        img: "/icons/user.svg",
     },
     {
         id: 4,
-        img: "icons/mode.svg",
+        img: "/icons/mode.svg",
     },
 ];
 
 const dockApps = [
     {
-        id: "portfolio",  
-        name: "Portfolio",
+        id: "finder",  
+        name: "Projects",
         icon: "finder.png",
         canOpen: true,
     },
@@ -67,7 +67,7 @@ const dockApps = [
         id: "trash",
         name: "Archive",
         icon: "trash.png",
-        canOpen: false,
+        canOpen: true,
     },
 ];
 
@@ -456,6 +456,7 @@ export const locations = {
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
+    trash: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },

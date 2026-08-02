@@ -106,27 +106,46 @@ it’s about choosing tools that make building fun again.
     `,
   },
   "article-2": {
-    title: "How Open Source Made Me a Better Developer",
+    title: "FOSSEE Internship Experience",
     content: `
-Contributing to open source helped me:
-- Understand real-world codebases
-- Collaborate with developers globally
-- Improve debugging and code reading skills
+My FOSSEE Internship Journey
 
-It’s one of the fastest ways to grow as a developer.
+When I first found out I was going to IIT Bombay for my FOSSEE internship, I was honestly stunned. Walking into that campus for the first time felt surreal. The whole Bombay experience was incredible, but what really made it special were the people. 
+
+The colleagues and mentors I worked with were incredibly welcoming and helpful. I came in with a lot of excitement but also a healthy dose of imposter syndrome, and they made sure I always had someone to turn to when I hit a wall.
+
+And trust me, I hit a few walls.
+
+The Setup Struggle
+Before I even got to write any meaningful code, I got completely stuck on just setting up the project. The codebase had gone through several version changes, and getting all the dependencies to play nicely on my machine was a nightmare. I spent what felt like forever just wrestling with environments, reading outdated docs, and feeling like I was already falling behind. 
+
+But looking back, that struggle was exactly what I needed. It forced me to actually understand how the project was wired together under the hood rather than just blindly running 'npm install' or 'pip install'.
+
+Diving into the Tech
+Once the environment was finally stable, I got to dive into the actual open-source work. My focus was on building and refining tools meant to democratize technical education. The shift from writing solo projects to contributing to a massive, shared codebase was huge. I had to learn how to write cleaner code, structure proper pull requests, and communicate my technical decisions during code reviews.
+
+FOSSEE wasn't just about the code I wrote; it was about learning how real software is built by real teams. It was challenging, sometimes frustrating, but entirely worth it.
     `,
   },
   "article-3": {
-    title: "Recreating Apple UI Animations on the Web",
+    title: "The Internship Hustle: Balancing It All",
     content: `
-Apple UI feels smooth because of physics-based animations.
+The Realities of the Internship Hunt
 
-Using GSAP, I recreated:
-- Dock animations
-- Window transitions
-- Micro-interactions
+Looking for an internship isn't just about sending out resumes—it's practically a full-time job on its own. 
 
-Focus is on realism, responsiveness, and detail.
+The Balancing Act
+At any given moment, my brain was juggling multiple demanding tracks simultaneously. On one hand, there was the relentless grind of Data Structures and Algorithms (DSA). Solving LeetCode problems became a daily ritual, constantly trying to optimize time and space complexities while keeping up with the patterns. 
+
+On the other hand, there were the personal projects. It's one thing to solve algorithmic puzzles, but building actual, functioning software that looks good and solves a problem is what truly stands out. I was constantly pushing myself to learn new frameworks, squash bugs, and polish the UI of my apps to build a solid portfolio.
+
+The Academic Reality
+And let's not forget the GPA. Navigating coursework, assignments, and exams while keeping grades up was an ongoing pressure. Trying to be a good student, a competent problem solver, and an active developer all at once is incredibly demanding. 
+
+Avoiding the Burnout
+With all this going on, burnout is a very real threat. I learned the hard way that you cannot just grind 24/7. 
+
+I had to consciously make time to just enjoy life—hanging out with friends, taking breaks away from the screen, and letting my brain rest. I realized that enjoying the journey and taking care of my mental health actually made me sharper when I did sit back down to code. The hustle is important, but staying sane and enjoying life along the way is what actually makes the whole process sustainable.
     `,
   },
 };

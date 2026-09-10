@@ -5,104 +5,37 @@ import useWindowStore from "@store/window.js";
 
 const ARTICLES_CONTENT = {
   "article-1": {
-    title: "Why I use GSAP + Vite over plain React",
+    title: "Overnight Hackathon: Coffee, Code, and the 24-Hour Grind",
     content: `
-Why I Use GSAP + Vite Over Plain React
+Overnight Hackathon: Coffee, Code, and the 24-Hour Grind
 
-When I first started with React, I was honestly pretty clueless. I had just begun programming, and everything felt overwhelming — components, hooks, state, props… it was a lot to process all at once.
+There is nothing quite like the adrenaline rush of a 24-hour overnight hackathon.
 
-Like most beginners, I kind of ChatGPT’d my way through it and followed tutorials without fully understanding what was happening under the hood.
+It usually starts with a burst of excitement, a whiteboard full of overly ambitious ideas, and the naive belief that "we'll definitely have time to sleep for a few hours."
 
-At some point, I started exploring alternatives and watching frontend videos, and that’s when I came across Vite.
+Spoiler alert: We never do.
 
-And the first time I used it… it just clicked.
+---
 
-First Impression Matters
+The Brainstorming Phase (8:00 PM)
 
-When I ran Vite for the first time and saw the default page load instantly, I genuinely thought:
+We spent the first few hours debating ideas. The theme was "Tech for Social Good", which meant everyone was pitching some variation of a crowd-sourced donation app. We wanted to do something different, so we settled on an accessibility tool.
 
-“Wait… did I just build something already?”
+The architecture was drawn up, the repo was initialized, and we assigned roles. Everything was going perfectly.
 
-That moment hooked me.
+The Midway Crash (3:00 AM)
 
-It wasn’t just about speed — it was the feeling of instant feedback. No long loading times, no confusing setup, no boilerplate fatigue.
+This is the hardest part of any hackathon. The initial energy has worn off, the caffeine is losing its edge, and you've hit your first major roadblock. For us, it was a nasty CORS error when trying to fetch data from an external API, coupled with a mysterious state bug in React that only seemed to happen on every alternate re-render.
 
-Why Vite Felt Better (From Day 1)
+I spent an hour just staring at the screen, questioning why I chose this field. Then, a team member suggested a completely hacky workaround. Under normal circumstances, I'd never merge it. At 4:00 AM in a hackathon? It was the most beautiful code I'd ever seen.
 
-Compared to my early experience with React setups:
+The Final Sprint (9:00 AM)
 
-No complex configurations
-No heavy build setup upfront
-No confusing file structure
-Super fast startup and hot reload
+The deadline was looming. We scrambled to piece together the frontend UI while the backend was barely held together by duct tape and prayers. We didn't have time to write tests, and we definitely didn't have time to refactor.
 
-Everything felt lighter, faster, and more intuitive.
+But somehow, it compiled. It ran. The demo worked.
 
-The Technical Side (Why It Actually Wins)
-
-After using both more seriously, I realized it wasn’t just a “feels good” thing — there are real technical advantages:
-
-⚡ Lightning-fast dev server
-Vite uses native ES modules, so it doesn’t bundle everything before serving.
-🔁 Instant Hot Module Replacement (HMR)
-Changes reflect almost instantly — no waiting, no reload lag.
-📦 Optimized builds with Rollup
-Production builds are clean and efficient without extra effort.
-🧠 Simpler mental model
-You focus on writing code, not configuring tooling.
-Where GSAP Comes In
-
-Now combine that with GSAP — and things get really interesting.
-
-React animations (especially with CSS or basic libraries) can feel:
-
-Limited
-Hard to sequence
-Messy for complex interactions
-
-GSAP fixes that completely.
-
-With GSAP, I get:
-
-🎬 Precise timeline control
-🔄 Smooth sequencing of animations
-🧩 Fine-grained control over every element
-⚡ High performance (even with complex UI)
-Why This Combo Works So Well
-
-Vite handles the development experience,
-GSAP handles the visual experience.
-
-Together:
-
-Fast dev workflow
-Smooth UI animations
-Clean code structure
-Better control over interactions
-What I Realized
-
-At some point, I stopped thinking:
-
-“Which framework is more popular?”
-
-And started thinking:
-
-“Which tool lets me build what I imagine — faster and cleaner?”
-
-For me, that answer became:
-
-Vite + GSAP
-
-Final Thoughts
-
-React is powerful — no doubt.
-But for someone starting out, or someone who wants speed + control + creativity…
-
-This combo just feels better.
-
-It’s not about replacing React entirely —
-it’s about choosing tools that make building fun again.
-
+We presented our project on stage, sleep-deprived but incredibly proud. We didn't win first place, but the experience of building something from scratch, under intense pressure, with a team of passionate developers, was a prize in itself.
     `,
   },
   "article-2": {

@@ -77,7 +77,7 @@ const Dock = () => {
                     <div key={id} className="relative flex justify-center">
                         <button
                             type="button"
-                            className="dock-icon"
+                            className="dock-icon focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:bg-white/20 rounded-xl"
                             aria-label={name}
                             data-tooltip-id="dock-tooltip"
                             data-tooltip-content={name}

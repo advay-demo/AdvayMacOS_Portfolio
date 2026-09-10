@@ -32,9 +32,15 @@ const DesktopIcons = () => {
                 <div
                     key={app.id}
                     ref={(el) => (iconsRef.current[i] = el)}
-                    className="absolute flex flex-col items-center justify-center w-24 p-2 rounded-md hover:bg-white/20 cursor-pointer pointer-events-auto transition-colors"
+                    className="absolute flex flex-col items-center justify-center w-24 p-2 rounded-md hover:bg-white/20 focus:bg-white/20 focus:ring-2 focus:ring-blue-400 focus:outline-none cursor-pointer pointer-events-auto transition-all"
                     style={{ left: app.x, top: app.y }}
                     onDoubleClick={() => openWindow(app.id)}
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                            openWindow(app.id);
+                        }
+                    }}
                 >
                     <img src={app.icon} alt={app.name} className="w-14 h-14 object-contain drop-shadow-md" />
                     <span className="text-white text-sm font-medium mt-1 drop-shadow-md bg-black/20 px-1.5 rounded">{app.name}</span>

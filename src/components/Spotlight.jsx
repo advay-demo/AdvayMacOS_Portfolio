@@ -8,6 +8,7 @@ const Spotlight = () => {
     const { spotlightOpen, setSpotlight } = useSystemStore();
     const { openWindow } = useWindowStore();
     const [query, setQuery] = useState("");
+    const [selectedIndex, setSelectedIndex] = useState(0);
     const inputRef = useRef(null);
 
     // Combine apps and some nav links for search
@@ -19,6 +20,11 @@ const Spotlight = () => {
     const filtered = searchItems.filter(item => 
         item.name.toLowerCase().includes(query.toLowerCase())
     );
+
+    // Reset selection when query changes
+    useEffect(() => {
+        setSelectedIndex(0);
+    }, [query]);
 
     // Global keyboard shortcut (Cmd+K / Ctrl+K)
     useEffect(() => {
@@ -50,6 +56,21 @@ const Spotlight = () => {
         setSpotlight(false);
     };
 
+    const handleInputKeyDown = (e) => {
+        if (filtered.length === 0) return;
+
+        if (e.key === "ArrowDown") {
+            e.preventDefault();
+            setSelectedIndex((prev) => (prev + 1) % filtered.length);
+        } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            setSelectedIndex((prev) => (prev - 1 + filtered.length) % filtered.length);
+        } else if (e.key === "Enter") {
+            e.preventDefault();
+            handleSelect(filtered[selectedIndex].id);
+        }
+    };
+
     return (
         <div className="fixed inset-0 z-[9998] flex items-start justify-center pt-[20vh]">
             <div className="absolute inset-0 bg-transparent" onClick={() => setSpotlight(false)} />
@@ -62,27 +83,29 @@ const Spotlight = () => {
                         type="text"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
+                        onKeyDown={handleInputKeyDown}
                         placeholder="Spotlight Search"
                         className="w-full bg-transparent outline-none text-2xl font-light text-gray-800 placeholder:text-gray-400"
-                        onKeyDown={(e) => {
-                            if (e.key === "Enter" && filtered.length > 0) {
-                                handleSelect(filtered[0].id);
-                            }
-                        }}
                     />
                 </div>
 
                 {query && (
                     <div className="max-h-[300px] overflow-y-auto p-2">
                         {filtered.length > 0 ? (
-                            filtered.map((item) => (
+                            filtered.map((item, index) => (
                                 <div
                                     key={item.id}
                                     onClick={() => handleSelect(item.id)}
-                                    className="flex items-center justify-between px-4 py-2 hover:bg-blue-500 hover:text-white rounded-lg cursor-pointer group"
+                                    className={`flex items-center justify-between px-4 py-2 rounded-lg cursor-pointer group transition-colors ${
+                                        index === selectedIndex 
+                                        ? "bg-blue-500 text-white" 
+                                        : "hover:bg-blue-50 hover:text-gray-900"
+                                    }`}
                                 >
                                     <span className="font-medium">{item.name}</span>
-                                    <span className="text-xs text-gray-400 group-hover:text-blue-200">{item.type}</span>
+                                    <span className={`text-xs ${index === selectedIndex ? "text-blue-100" : "text-gray-400"}`}>
+                                        {item.type}
+                                    </span>
                                 </div>
                             ))
                         ) : (

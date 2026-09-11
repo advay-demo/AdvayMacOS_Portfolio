@@ -25,6 +25,22 @@ const useWindowStore = create(
                 win.data = null;
             }),
 
+        closeFocusedWindow: () =>
+            set((state) => {
+                let focusedKey = null;
+                let maxZ = -1;
+                for (const [key, win] of Object.entries(state.windows)) {
+                    if (win.isOpen && !win.isMinimized && win.zIndex > maxZ) {
+                        maxZ = win.zIndex;
+                        focusedKey = key;
+                    }
+                }
+                if (focusedKey) {
+                    state.windows[focusedKey].isOpen = false;
+                    state.windows[focusedKey].zIndex = INITIAL_Z_INDEX;
+                }
+            }),
+
         focusWindow: (windowKey) =>
             set((state) => {
                 const win = state.windows[windowKey];

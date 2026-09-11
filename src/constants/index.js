@@ -75,8 +75,7 @@ const blogPosts = [
     {
         id: 1,
         date: "Sep 2, 2025",
-        title:
-            "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
+        title: "Overnight Hackathon: Coffee, Code, and the 24-Hour Grind",
         image: "/images/blog1.png",
         link: "#",
     },

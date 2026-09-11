@@ -16,8 +16,11 @@ import { Articles } from "@windows";
 import { Article1, Article2, Article3 } from "@windows";
 import { Photos, Resume, Finder, Archive } from "@windows";
 
+import useWindowStore from "@store/window.js";
+
 const App = () => {
-    const { wallpaper, isMissionControl, toggleMissionControl } = useSystemStore();
+    const { wallpaper, isMissionControl, toggleMissionControl, spotlightOpen } = useSystemStore();
+    const { closeFocusedWindow } = useWindowStore();
 
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -25,10 +28,16 @@ const App = () => {
                 e.preventDefault();
                 toggleMissionControl();
             }
+            if (e.key === "Escape") {
+                // If Spotlight is open, the Spotlight component handles its own close
+                if (!useSystemStore.getState().spotlightOpen) {
+                    closeFocusedWindow();
+                }
+            }
         };
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [toggleMissionControl]);
+    }, [toggleMissionControl, closeFocusedWindow]);
 
     return (
         <main

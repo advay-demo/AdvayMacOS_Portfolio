@@ -12,7 +12,15 @@ const Resume = () => {
     <div className="flex flex-col w-full h-full">
       <div id="window-header" className="bg-gray-100 flex items-center px-4 py-2 border-b border-gray-300">
         <WindowControls target="resume" />
-        <h2 className="text-sm font-bold text-center flex-1 pr-12">Resume</h2>
+        <h2 className="text-sm font-bold text-center flex-1">Resume</h2>
+        <a 
+            href="/resume.pdf" 
+            download="Advay_Resume.pdf"
+            className="text-xs font-semibold bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 transition-colors shadow-sm"
+            title="Download PDF"
+        >
+            Download
+        </a>
       </div>
       <div className="flex-1 w-full h-full bg-white overflow-hidden">
         <iframe 
